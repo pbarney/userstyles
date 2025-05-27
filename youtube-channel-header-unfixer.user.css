@@ -1,0 +1,46 @@
+/* ==UserStyle==
+@name           YouTube Channel Header Unfixer
+@namespace      https://userstyles.world/user/12centuries
+@version        0.1
+@description    Makes the channel header scroll with the page on YouTube channel pages, improving visibility of video content, especially on smaller screens.
+@author         12Centuries
+@license        MIT
+@homepageURL    https://github.com/yourusername/youtube-channel-header-unfixer
+@supportURL     https://github.com/yourusername/youtube-channel-header-unfixer/issues
+@updateURL      https://raw.githubusercontent.com/yourusername/youtube-channel-header-unfixer/main/youtube-channel-header-unfixer.user.css
+==/UserStyle== */
+
+/*
+    Problem:
+    On YouTube channel pages, the large header stays pinned to the top while scrolling, making it hard 
+    to view more than one row of videos—especially on laptops or smaller screens.
+
+    Solution:
+    This user style makes the channel header scroll with the page instead of staying fixed. 
+*/
+
+@-moz-document
+  url-prefix("https://www.youtube.com/channel/"),
+  url-prefix("https://www.youtube.com/@"),
+  url-prefix("https://www.youtube.com/user/"),
+  url-prefix("https://youtube.com/channel/"),
+  url-prefix("https://youtube.com/@"),
+  url-prefix("https://youtube.com/user/") {
+    
+  #header.ytd-tabbed-page-header {
+        position: relative;
+    }
+
+    #wrapper.tp-yt-app-header-layout > [slot="header"] {
+        position: relative;
+    }
+
+    tp-yt-app-header.style-scope {
+        left: unset !important;
+        right: unset !important;
+    }
+
+    div.tp-yt-app-header-layout:nth-child(2) {
+        padding-top: unset !important;
+    }
+}
