@@ -20,12 +20,7 @@
 */
 
 @-moz-document
-  url-prefix("https://www.youtube.com/channel/"),
-  url-prefix("https://www.youtube.com/@"),
-  url-prefix("https://www.youtube.com/user/"),
-  url-prefix("https://youtube.com/channel/"),
-  url-prefix("https://youtube.com/@"),
-  url-prefix("https://youtube.com/user/") {
+  url-prefix("https://www.youtube.com/channel/"), url-prefix("https://www.youtube.com/@") {
     
   #header.ytd-tabbed-page-header {
         position: relative;
